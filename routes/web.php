@@ -11,6 +11,5 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/','ParseController@index')->name('index');
+Route::post('/parse','ParseController@store')->name('store');
