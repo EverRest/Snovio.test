@@ -24,7 +24,7 @@ class ParserServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->bind('App\Contracts\ParserInterface', function ($app) {
+        $this->app->bind('App\Library\Contracts\ParserInterface', function ($app) {
             return new Parser();
         });
     }

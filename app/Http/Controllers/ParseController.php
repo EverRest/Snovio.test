@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\ParseStoreRequest;
-use App\Contracts\ParserInterface;
+use App\Library\Contracts\ParserInterface;
 
 /**
  * Class ParseController
@@ -21,6 +21,6 @@ class ParseController extends Controller
 
     public function store(ParseStoreRequest $request, ParserInterface $parser)
     {
-//        dd($request->all());
+        $parser->parse($request->all(['url', 'deep', 'quantity']));
     }
 }

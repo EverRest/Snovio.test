@@ -82,16 +82,16 @@
             <form id="parse" method="post" action="/parse">
                 <input type="hidden" name="_token" id="csrf-token" value="{{ Session::token() }}" />
                 <div class="form-group">
-                    <label for="email">URL address:</label>
-                    <input name="url" type="text" required="required" class="form-control" id="url">
+                    <label for="url">URL address:</label>
+                    <input name="url" type="text" required="required" class="form-control" id="url" value="https://">
                 </div>
                 <div class="form-group">
                     <label for="deep">Deep inside:</label>
-                    <input name="deep" type="text" required="required" class="form-control" id="deep">
+                    <input name="deep" type="text" required="required" class="form-control" id="deep" value="0">
                 </div>
                 <div class="form-group">
                     <label for="quantity">Max quantity:</label>
-                    <input name="quantity"  type="text" required="required" class="form-control" id="quantity">
+                    <input name="quantity"  type="text" required="required" class="form-control" id="quantity" value="0">
                 </div>
                 <button type="submit" class="btn btn-primary btn-lg">Submit</button>
             </form>
