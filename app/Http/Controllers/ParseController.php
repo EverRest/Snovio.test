@@ -37,6 +37,7 @@ class ParseController extends Controller
      */
     public function index(): View
     {
+        $this->linkRepo->all();
         return view('index');
     }
     /**
