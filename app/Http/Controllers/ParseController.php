@@ -19,6 +19,10 @@ class ParseController extends Controller
         return view('index');
     }
 
+    /**
+     * @param ParseStoreRequest $request
+     * @param ParserInterface $parser
+     */
     public function store(ParseStoreRequest $request, ParserInterface $parser)
     {
         $parser->parse($request->all(['url', 'deep', 'quantity']));
