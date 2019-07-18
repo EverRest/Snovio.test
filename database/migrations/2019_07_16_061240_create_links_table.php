@@ -13,6 +13,7 @@ class CreateLinksTable extends Migration
      */
     public function up()
     {
+        Schema::dropIfExists('links');
         Schema::create('links', function (Blueprint $table) {
             $table->increments('id');
             $table->index('parent_id')->nullable();

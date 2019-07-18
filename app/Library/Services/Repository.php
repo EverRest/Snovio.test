@@ -13,15 +13,11 @@ use App\Library\Contracts\RepositoryInterface;
 class Repository implements RepositoryInterface
 {
     /**
-     * @var
-     */
-    public $model;
-    /**
      * @return mixed
      */
     public function all()
     {
-
+        $this->model->all();
     }
     /**
      * @param int $id

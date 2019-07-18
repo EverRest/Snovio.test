@@ -6,6 +6,7 @@ namespace App\Repositories;
 
 use App\Email;
 use App\Library\Services\Repository;
+use Illuminate\Database\Eloquent\Collection;
 
 /**
  * Class EmailRepository
@@ -14,11 +15,10 @@ use App\Library\Services\Repository;
 class EmailRepository extends Repository
 {
     /**
-     * EmailRepository constructor.
-     * @param Email $email
+     * @return Email[]|\Illuminate\Database\Eloquent\Collection|mixed
      */
-    public function __construct(Email $email)
+    public function all(): Collection
     {
-        $this->model = $email;
+        return Email::all();
     }
 }

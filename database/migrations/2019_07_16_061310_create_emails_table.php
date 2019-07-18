@@ -13,6 +13,7 @@ class CreateEmailsTable extends Migration
      */
     public function up()
     {
+        Schema::dropIfExists('emails');
         Schema::create('emails', function (Blueprint $table) {
             $table->increments('id');
             $table->index('link_id');

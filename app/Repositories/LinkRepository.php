@@ -6,6 +6,7 @@ namespace App\Repositories;
 
 use App\Library\Services\Repository;
 use App\Link;
+use Illuminate\Database\Eloquent\Collection;
 
 /**
  * Class LinkRepository
@@ -14,11 +15,10 @@ use App\Link;
 class LinkRepository extends Repository
 {
     /**
-     * LinkRepository constructor.
-     * @param Link $link
+     * @return Collection
      */
-    public function __construct(Link $link)
+    public function all(): Collection
     {
-        $this->model = $link;
+        return Link::all();
     }
 }
