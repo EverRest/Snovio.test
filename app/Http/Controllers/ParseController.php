@@ -43,9 +43,10 @@ class ParseController extends Controller
     /**
      * @param ParseStoreRequest $request
      * @param ParserInterface $parser
+     * @return bool
      */
-    public function store(ParseStoreRequest $request, ParserInterface $parser)
+    public function store(ParseStoreRequest $request, ParserInterface $parser): bool
     {
-        $parser->parse($request->all(['url', 'deep', 'quantity']));
+        return $parser->parse($request->all(['url', 'deep', 'quantity']));
     }
 }
